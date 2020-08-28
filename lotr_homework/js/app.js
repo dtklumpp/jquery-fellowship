@@ -1,6 +1,8 @@
 console.log("LOTR homework js file is connected");
 console.log("HINT: Click on the 'Elements' tab to see the elements that you are creating");
 console.log("---------------")
+
+
 // ==============================
 //       Dramatis Personae
 // ==============================
@@ -46,9 +48,60 @@ const makeMiddleEarth = () => {
 
   console.log("Trying to make middle earth.");
 
+
+
+
+
+
+
+
+
+
   // 1. create a section tag with an id of middle-earth
+      //const section2 = $.createElement('section'); this dog don't hunt
+  //const section0 = $.create('section'); this code don't go
+  //const section3 = $('<div></div>'); man why i got to type it twice
+
+
+  //apparently this is faster:
+  //const section1 = document.createElement('section');
+  //but this also works:
+  const section1 = $('<section />');
+  section1.attr('id', 'middle-earth');
+
+  //section5.addClass('middle-earth'); //this works...
+  //const showVar = $('section'); //oh i bet this doesn't find it b/c haven't added to page yet
+  //console.log(showVar);
+  //console.log({showVar});
+
+  //$('section').addClass('middle-earth');
+  //$('section').attr('id', 'middle-earth');
+
 
   // 2. append the section to the body of the DOM.
+  $('body').append(section1);
+  //$('section').attr('id', 'middle-earth'); //aha!
+  // console.log(section1);
+  // console.log({section1});
+
+  //$('body').append("<section id='middle earth'></section>");
+  //$('body').append('div'); doesn't work
+  //$('body').append('<div />'); this works!
+  //$('body').append('<div></div>'); this too!
+
+  //Lol i tried like 50 things over 1.5 hours just to answer the first 2 questions
+  //but they never told us how to create a floating element!
+
+
+
+
+
+
+
+
+
+
+
 
   // 3. use a for loop to iterate over the lands array that does the following:
 
