@@ -66,7 +66,7 @@ const makeMiddleEarth = () => {
   //apparently this is faster:
   //const section1 = document.createElement('section');
   //but this also works:
-  const $section1 = $('<section />');
+  const $section1 = $('<section/>');
   $section1.attr('id', 'middle-earth');
 
   //section5.addClass('middle-earth'); //this works...
@@ -114,10 +114,10 @@ const makeMiddleEarth = () => {
   //   3d. appends each land to the middle-earth section
 
   for(eachLand of lands){
-    const newArticle = $('<article />');
+    const newArticle = $('<article/>');
     newArticle.attr('id', eachLand);
     //newArticle.append('<h1 />').text(eachLand); //note: this doesn't work
-    newArticle.append($('<h1 />').text(eachLand));
+    newArticle.append($('<h1/>').text(eachLand));
     $section1.append(newArticle);
   }
 
@@ -141,7 +141,7 @@ const makeHobbits = () => {
   // 1. display an unordered list of the hobbits in the shire.
   const uList = $('<ul />');
   for(eachHobbit of hobbits){
-    const newHobbit = $('<li />').text(eachHobbit);
+    const newHobbit = $('<li/>').text(eachHobbit);
     uList.append(newHobbit);
   }
   $('#The-Shire').append(uList);
@@ -170,7 +170,7 @@ const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
 
-  const div1 = $('<div />');
+  const div1 = $('<div/>');
   div1.attr('id', 'the-ring');
 
   // 2. add the ring as a child of Frodo
@@ -198,9 +198,9 @@ const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
 
-  const uList2 = $('<ul />');
+  const uList2 = $('<ul/>');
   for(eachVillain of baddies){
-    uList2.append(($('<li />').text(eachVillain)));
+    uList2.append(($('<li/>').text(eachVillain)));
   }
   $('#Mordor').append(uList2);
 
@@ -208,7 +208,7 @@ const makeBaddies = () => {
   // 2. give each of the baddies a class of "baddy"
 
   $('#Mordor li').addClass('baddy');
-  
+
 
 
   // 3. remember to append them to Mordor
@@ -228,9 +228,29 @@ const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
 
+  const aside1 = $('<aside/>');
+  $('#middle-earth').append(aside1);
+  //$section1.append('<div>hey</div>');
+
+
+
+
   // 2. display an unordered list of buddies in the aside
 
+  
+  const uList3 = $('<ul />');
+  for(eachBuddy of buddies){
+    aside1.append($('<li/>').text(eachBuddy));
+  }
+
+
+
+
   // 3. give each of the buddies a class of "buddy"
+
+  $('aside li').attr('class', 'buddy');
+
+
 
 };
 
