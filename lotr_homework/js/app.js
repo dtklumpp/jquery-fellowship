@@ -240,9 +240,9 @@ const makeBuddies = () => {
   
   const uList3 = $('<ul />');
   for(eachBuddy of buddies){
-    aside1.append($('<li/>').text(eachBuddy));
+    uList3.append($('<li/>').text(eachBuddy));
   }
-
+  aside1.append(uList3);
 
 
 
@@ -288,7 +288,7 @@ const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 
-  const buddiesList = $('aside li');
+  const buddiesList = $('aside ul li');
   buddiesList.eq(3).text("Aragorn");
 
 
@@ -309,11 +309,26 @@ const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
 
+  const fellowship = $('<div/>');
+  fellowship.attr('id', 'the-fellowship');
+
   // 2. add an h1 with the text 'The Fellowship' to this new div
+
+  fellowship.append($('<h1/>').text("The Fellowship"));
+
+
 
   // 3. append the fellowship to middle-earth
 
+  $('#middle-earth').append(fellowship);
+
+
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
+
+  const hobbits = $('#Rivendell ul');
+  const friends = $('aside ul');
+  fellowship.append(hobbits).append(friends);
+
 
 };
 
