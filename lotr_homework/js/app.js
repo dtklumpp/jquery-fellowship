@@ -345,9 +345,26 @@ const theBalrog = () => {
 
   // 1. change the 'Gandalf' textNode to 'Gandalf the White'
 
+  const companions = $('#the-fellowship ul li');
+  const gandalf = companions.eq(4);
+  gandalf.text('Gandalf the White');
+
   // 2. add a class "the-white" to this element
 
+  gandalf.addClass('the-white');
+
   // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
+
+  //ok will do
+  //did first part in there
+  //doing 2nd part here
+  // gandalf.style.border = 'solid 5px grey'; //guess this didn't work??
+  //no maybe it did
+  //anyway doind this now:
+  gandalf.css('border', 'solid 3x grey');
+
+
+
 
 };
 
