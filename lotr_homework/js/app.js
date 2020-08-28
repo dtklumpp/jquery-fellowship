@@ -121,15 +121,17 @@ const makeMiddleEarth = () => {
     $section1.append(newArticle);
   }
 
-
-
-
-
-
 };
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 1 complete - Made Middle Earth".
+
+
+
+
+
+
+
 
 // ============
 // Chapter 2
@@ -160,6 +162,13 @@ const makeHobbits = () => {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 2 complete - Made the Hobbits".
 
+
+
+
+
+
+
+
 // ============
 // Chapter 3
 // ============
@@ -189,6 +198,13 @@ const keepItSecretKeepItSafe = () => {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 3 complete - Made the ring and gave it to Frodo".
 
+
+
+
+
+
+
+
 // ============
 // Chapter 4
 // ============
@@ -217,6 +233,13 @@ const makeBaddies = () => {
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 4 complete - Made the Baddies"..
+
+
+
+
+
+
+
 
 // ============
 // Chapter 5
@@ -257,6 +280,14 @@ const makeBuddies = () => {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 5 complete - Made the Buddies".
 
+
+
+
+
+
+
+
+
 // ============
 // Chapter 6
 // ============
@@ -278,6 +309,15 @@ const leaveTheShire = () => {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
+
+
+
+
+
+
+
+
+
 // ============
 // Chapter 7
 // ============
@@ -298,6 +338,13 @@ const beautifulStranger = () => {
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 7 complete - Strider is changed to Aragorn"
+
+
+
+
+
+
+
 
 // ============
 // Chapter 8
@@ -335,6 +382,13 @@ const forgeTheFellowShip = () => {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 8 complete - The Fellowship is created"
 
+
+
+
+
+
+
+
 // ============
 // Chapter 9
 // ============
@@ -363,13 +417,17 @@ const theBalrog = () => {
   //anyway doind this now:
   gandalf.css('border', 'solid 3x grey');
 
-
-
-
 };
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
+
+
+
+
+
+
+
 
 // ============
 // Chapter 10
@@ -381,9 +439,27 @@ const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
 
+  alert("then bloweth the horn of gondor");
+  alert("it is said that if it be blown at need anywhere within the bounds of Gondor, as the realm was of old, its voice will not pass unheeded");
+  alert(`'Loud and clear it sounds in the valleys of the hills,' he said, 'and then let all the foes of Gondor flee.'`);
+
+
+
+  
+
   // 2. Boromir's been killed by the Uruk-hai! Put a linethrough on Boromir's name
 
+  const boromir = $('#the-fellowship ul li').eq(8);
+  boromir.css('text-decoration', 'line-through');
+
+
   // 3. Tricky: Remove the Uruk-Hai from the Baddies on the page
+  
+  const urukhai = $('#Mordor ul li').eq(2);
+  urukhai.remove();
+  
+
+
 
 };
 
