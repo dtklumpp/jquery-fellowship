@@ -439,10 +439,16 @@ const hornOfGondor = () => {
 
   // 1. create a pop-up alert that the horn of gondor has been blown
 
+
+  //restore horn once done bug-testing
+
   alert("then bloweth the horn of gondor");
   alert("it is said that if it be blown at need anywhere within the bounds of Gondor, as the realm was of old, its voice will not pass unheeded");
   alert(`'Loud and clear it sounds in the valleys of the hills,' he said, 'and then let all the foes of Gondor flee.'`);
 
+
+
+  //timing is off with these?
 
 
   
@@ -466,6 +472,13 @@ const hornOfGondor = () => {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 10 complete - horn of gandor blew and Boromir is dead"
 
+
+
+
+
+
+
+
 // ============
 // Chapter 11
 // ============
@@ -479,7 +492,7 @@ const itsDangerousToGoAlone = () => {
   $('#Mordor').append($('#the-fellowship ul li').eq(0));
   $('#Mordor').append($('#the-fellowship ul li').eq(0));
   //wonder if had added both at once?
-  
+
 
 
 
@@ -494,6 +507,13 @@ const itsDangerousToGoAlone = () => {
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 11 complete - Sam and Frodo are in Mordor and Mount Doom has been created"
 
+
+
+
+
+
+
+
 // ============
 // Chapter 12
 // ============
@@ -504,14 +524,31 @@ const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
 
+  const gollum = $('<div/>');
+  gollum.attr('id', 'gollum');
+  $('#Mordor').append(gollum);
+
+
   // 2. Move the ring from Frodo and give it to Gollum
 
+  gollum.append($('#the-ring'));
+
+
   // 3. Move Gollum into Mount Doom
+
+  $('#mount-doom').append(gollum);
 
 };
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 12 complete - Gollum is trying to get the ring".
+
+
+
+
+
+
+
 
 // ============
 // Chapter 13
@@ -523,9 +560,27 @@ const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
 
+  $('#mount-doom').empty(); //as it does...
+  //$('#gollum').remove(); //not sure why previous command didn't do it
+  //$('')
+  $('#mount-doom').remove(); //why not
+  
+  //$('#the-ring').remove();
+  //$('#gollum').remove();
+
+
   // 2. remove all the baddies from the DOM
 
+  $('#Mordor ul').empty();
+
   // 3. Move all the hobbits back to the shire
+
+  
+  $('#The-Shire').append($('#Mordor li'));
+ $('#The-Shire').append($('#the-fellowship li.hobbit'));
+ $('#Rivendell').append($('#the-fellowship li')); //onward to the Grey Havens!
+
+
 
 };
 
