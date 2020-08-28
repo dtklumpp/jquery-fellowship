@@ -66,8 +66,8 @@ const makeMiddleEarth = () => {
   //apparently this is faster:
   //const section1 = document.createElement('section');
   //but this also works:
-  const section1 = $('<section />');
-  section1.attr('id', 'middle-earth');
+  const $section1 = $('<section />');
+  $section1.attr('id', 'middle-earth');
 
   //section5.addClass('middle-earth'); //this works...
   //const showVar = $('section'); //oh i bet this doesn't find it b/c haven't added to page yet
@@ -79,7 +79,7 @@ const makeMiddleEarth = () => {
 
 
   // 2. append the section to the body of the DOM.
-  $('body').append(section1);
+  $('body').append($section1);
   //$('section').attr('id', 'middle-earth'); //aha!
   // console.log(section1);
   // console.log({section1});
@@ -91,7 +91,7 @@ const makeMiddleEarth = () => {
 
   //Lol i tried like 50 things over 1.5 hours just to answer the first 2 questions
   //but they never told us how to create a floating element!
-
+  //well, at least now i won't forget...
 
 
 
@@ -112,6 +112,19 @@ const makeMiddleEarth = () => {
   //   3c. includes an h1 with the name of the land inside each land article
 
   //   3d. appends each land to the middle-earth section
+
+  for(eachLand of lands){
+    const newArticle = $('<article />');
+    newArticle.attr('id', eachLand);
+    //newArticle.append('<h1 />').text(eachLand); //note: this doesn't work
+    newArticle.append($('<h1 />').text(eachLand));
+    $section1.append(newArticle);
+  }
+
+
+
+
+
 
 };
 
